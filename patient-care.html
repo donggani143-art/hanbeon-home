@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>정기검진 환자관리 서비스 | 한번 마케팅</title>
+  <meta name="description" content="심리학 기반 설계로 실제 내원율을 만드는 메디컬 전문 콜 시스템. 개설 2년 만에 파트너 병원 100곳 돌파. 정기검진 콜, 구조가 결과를 만듭니다." />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700;800;900&family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" />
+
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+  <!-- 공통 스타일 + 전용 스타일 -->
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/patient-care.css" />
+
+  <style>
+    /* ===== 탭: 중앙정렬 + 폰트 강제 ===== */
+    .pc-service-tabs {
+      display: flex !important;
+      justify-content: center !important;
+    }
+    .pc-tab-btn {
+      font-size: 20px !important;
+      font-weight: 700 !important;
+      padding: 16px 44px !important;
+      color: #999 !important;
+    }
+    .pc-tab-btn.active {
+      color: #0021ff !important;
+      border-bottom: 3px solid #0021ff !important;
+    }
+
+    /* ===== 인트로 이미지: 크게 + 중앙 ===== */
+    .pc-intro-img-wrap {
+      display: flex !important;
+      flex-direction: column !important;
+      align-items: center !important;
+      gap: 36px !important;
+    }
+    .pc-intro-img-wrap img {
+      width: 100% !important;
+      max-width: 100% !important;
+      border-radius: 16px !important;
+      box-shadow: 0 12px 48px rgba(0,0,0,0.12) !important;
+      display: block !important;
+    }
+
+    /* ===== 인트로 섹션 컨테이너: 좌우 패딩 줄여 이미지 최대화 ===== */
+    .pc-intro .pc-container {
+      max-width: 1200px !important;
+      padding: 0 24px !important;
+    }
+  </style>
+</head>
+<body class="sub-page">
+
+  <!-- ===== NAVIGATION ===== -->
+  <header id="site-header" class="sub-header scrolled">
+    <nav class="nav-container">
+      <a href="index.html" class="nav-logo">
+        <span class="logo-en">LET'S DO IT</span>
+        <span class="logo-kr">한번</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html#services">서비스</a></li>
+        <li><a href="index.html#stats">성과</a></li>
+        <li><a href="index.html#process">진행방식</a></li>
+        <li><a href="qna.html" class="nav-cta">무료 진단</a></li>
+      </ul>
+      <button class="nav-hamburger" id="hamburgerBtn" aria-label="메뉴 열기">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+    <div class="mobile-menu" id="mobileMenu">
+      <ul>
+        <li><a href="index.html#services" class="mobile-link">서비스</a></li>
+        <li><a href="index.html#stats" class="mobile-link">성과</a></li>
+        <li><a href="index.html#process" class="mobile-link">진행방식</a></li>
+        <li><a href="qna.html" class="mobile-link cta">무료 진단</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ===== HERO ===== -->
+    <section class="pc-hero" id="hero">
+      <div class="pc-hero-bg">
+        <div class="pc-hero-overlay"></div>
+        <img
+          src="https://cdn.imweb.me/thumbnail/20260218/7fd1486e9b69e.jpg"
+          alt="정기검진 환자관리 히어로 배경"
+          class="pc-hero-bg-img"
+        />
+      </div>
+      <div class="pc-container pc-hero-inner">
+        <h1 class="pc-hero-title">
+          정기검진 콜,<br />
+          구조가 결과를 만듭니다.
+        </h1>
+        <p class="pc-hero-sub"><br /></p>
+      </div>
+    </section>
+
+    <!-- ===== 서비스 탭 + 인트로 ===== -->
+    <section class="pc-intro" id="intro" style="background:#fff; padding:80px 0 72px;">
+      <div style="max-width:1200px; margin:0 auto; padding:0 32px;">
+        <!-- 서비스 탭 -->
+        <nav style="display:flex; justify-content:center; border-bottom:2px solid #e8e8e8; margin-bottom:60px;" aria-label="서비스 메뉴">
+          <a href="patient-care.html" style="font-size:20px; font-weight:700; color:#0021ff; padding:16px 44px; border-bottom:3px solid #0021ff; margin-bottom:-2px; text-decoration:none; white-space:nowrap; display:inline-block;">치과 정기검진 콜 서비스</a>
+          <a href="#" style="font-size:20px; font-weight:700; color:#aaa; padding:16px 44px; border-bottom:3px solid transparent; margin-bottom:-2px; text-decoration:none; white-space:nowrap; display:inline-block;">실행 중심 마케팅 광고</a>
+        </nav>
+
+        <!-- 인트로 이미지 -->
+        <div style="display:flex; flex-direction:column; align-items:center; gap:36px;">
+          <img
+            src="https://cdn.imweb.me/thumbnail/20251219/dbbc932b08cd3.jpg"
+            alt="정기검진 콜 서비스 소개 인포그래픽 1"
+            loading="lazy"
+            style="width:100%; max-width:1100px; border-radius:16px; box-shadow:0 12px 48px rgba(0,0,0,0.12); display:block;"
+          />
+          <img
+            src="https://cdn.imweb.me/thumbnail/20251219/8f5004f86e494.jpg"
+            alt="정기검진 콜 서비스 소개 인포그래픽 2"
+            loading="lazy"
+            style="width:100%; max-width:1100px; border-radius:16px; box-shadow:0 12px 48px rgba(0,0,0,0.12); display:block;"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 파트너 병원 100+ ===== -->
+    <section class="pc-partners" id="partners">
+      <div class="pc-container">
+        <header class="pc-partners-head">
+          <span class="pc-section-label">Partner Hospitals</span>
+          <h2 class="pc-section-title white">정기검진 콜 서비스</h2>
+          <p class="pc-section-desc" style="color:rgba(255,255,255,0.82);">
+            한번마케팅 개설 2년 만에 입소문만으로 100곳 돌파!
+          </p>
+        </header>
+
+        <!-- PC: 4열 테이블 -->
+        <table class="pc-hospital-table" aria-label="파트너 병원 목록">
+          <tbody>
+            <tr>
+              <td>강남새로치과</td><td>강북백상치과</td><td>굿모닝치과</td><td>구로유디치과</td>
+            </tr>
+            <tr>
+              <td>더감동치과</td><td>다인치과병원</td><td>더와이즈치과병원</td><td>더에스플란트치과의원</td>
+            </tr>
+            <tr>
+              <td>더케이365치과병원</td><td>더좋은서울치과</td><td>WOOA성형외과</td><td>디에이성형외과의원</td>
+            </tr>
+            <tr>
+              <td>라이프치과</td><td>리드온치과의원</td><td>마음치주과치과</td><td>모아치과그룹</td>
+            </tr>
+            <tr>
+              <td>뷰성형외과</td><td>미래로치과의원</td><td>미미치과</td><td>바이블치과의원</td>
+            </tr>
+            <tr>
+              <td>반포이치과의원</td><td>연세온아치과병원</td><td>밸런스치과병원</td><td>범계유디치과</td>
+            </tr>
+            <tr>
+              <td>별내우리치과</td><td>보아치과</td><td>서울365열린치과</td><td>서울가온치과의원</td>
+            </tr>
+            <tr>
+              <td>서울권치과</td><td>서울굿모닝</td><td>서울다올치과</td><td>서울디테일치과</td>
+            </tr>
+            <tr>
+              <td>서울바른마음치과</td><td>서울바로치과</td><td>서울사려깊은치과</td><td>서울심플치과</td>
+            </tr>
+            <tr>
+              <td>서울수려한치과의원</td><td>서울연치과</td><td>서울오늘치과</td><td>서울원플란트치과</td>
+            </tr>
+            <tr>
+              <td>서울이든치과</td><td>서울이앤이치과의원</td><td>서울자연치과</td><td>서울정플란트치과</td>
+            </tr>
+            <tr>
+              <td>서울좋은치과</td><td>서울하늘플란트치과</td><td>서울행신치과</td><td>서울탑프란트치과</td>
+            </tr>
+            <tr>
+              <td>서강플러스치과</td><td>서산연세치과</td><td>서현유디치과</td><td>성문치과병원</td>
+            </tr>
+            <tr>
+              <td>성심바른치과</td><td>선플란트치과</td><td>무거유디치과</td><td>아이엠치과병원 강동</td>
+            </tr>
+            <tr>
+              <td>아이엠치과병원 평택</td><td>알프스치과</td><td>앤플란트치과</td><td>에이블치과</td>
+            </tr>
+            <tr>
+              <td>연세365치과</td><td>연세다정플란트치과</td><td>뉴헤어모발성형외과의원</td><td>연세꿈꾸는아이치과의원</td>
+            </tr>
+            <tr>
+              <td>옥스치과</td><td>올곧바른치과</td><td>닥터훈치과</td><td>원플란트치과</td>
+            </tr>
+            <tr>
+              <td>이엔수석치과</td><td>일산스마트치과</td><td>인생플란트치과</td><td>용인스마트치과</td>
+            </tr>
+            <tr>
+              <td>윤구강악안면외과치과의원</td><td>조은서울치과</td><td>미래로치과(강동)</td><td>티파니치과</td>
+            </tr>
+            <tr>
+              <td>화이트라인치과</td><td>한빛치과의원</td><td>화이트플란치과</td><td>타이거치과</td>
+            </tr>
+            <tr>
+              <td>파주스마트치과의원</td><td>퍼펙트치과</td><td>평택뉴욕치과</td><td>강서모아치과</td>
+            </tr>
+            <tr>
+              <td>프라임치과</td><td>플랜트치과</td><td>하남스마트치과의원</td><td>하이탑치과</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <!-- 모바일: 2열 테이블 -->
+        <table class="pc-hospital-table-mobile" aria-label="파트너 병원 목록 (모바일)">
+          <tbody>
+            <tr><td>강남새로치과</td><td>강북백상치과</td></tr>
+            <tr><td>굿모닝치과</td><td>구로유디치과</td></tr>
+            <tr><td>더감동치과</td><td>다인치과병원</td></tr>
+            <tr><td>더와이즈치과병원</td><td>더에스플란트치과의원</td></tr>
+            <tr><td>더케이365치과병원</td><td>더좋은서울치과</td></tr>
+            <tr><td>WOOA성형외과</td><td>디에이성형외과의원</td></tr>
+            <tr><td>라이프치과</td><td>리드온치과의원</td></tr>
+            <tr><td>마음치주과치과</td><td>모아치과그룹</td></tr>
+            <tr><td>뷰성형외과</td><td>미래로치과의원</td></tr>
+            <tr><td>미미치과</td><td>바이블치과의원</td></tr>
+            <tr><td>반포이치과의원</td><td>연세온아치과병원</td></tr>
+            <tr><td>밸런스치과병원</td><td>범계유디치과</td></tr>
+            <tr><td>별내우리치과</td><td>보아치과</td></tr>
+            <tr><td>서울365열린치과</td><td>서울가온치과의원</td></tr>
+            <tr><td>서울권치과</td><td>서울굿모닝</td></tr>
+            <tr><td>서울다올치과</td><td>서울디테일치과</td></tr>
+            <tr><td>서울바른마음치과</td><td>서울바로치과</td></tr>
+            <tr><td>서울사려깊은치과</td><td>서울심플치과</td></tr>
+            <tr><td>서울수려한치과의원</td><td>서울연치과</td></tr>
+            <tr><td>서울오늘치과</td><td>서울원플란트치과</td></tr>
+            <tr><td>서울이든치과</td><td>서울이앤이치과의원</td></tr>
+            <tr><td>서울자연치과</td><td>서울정플란트치과</td></tr>
+            <tr><td>서울좋은치과</td><td>서울하늘플란트치과</td></tr>
+            <tr><td>서울행신치과</td><td>서울탑프란트치과</td></tr>
+            <tr><td>서강플러스치과</td><td>서산연세치과</td></tr>
+            <tr><td>서현유디치과</td><td>성문치과병원</td></tr>
+            <tr><td>성심바른치과</td><td>선플란트치과</td></tr>
+            <tr><td>무거유디치과</td><td>아이엠치과병원 강동</td></tr>
+            <tr><td>아이엠치과병원 평택</td><td>알프스치과</td></tr>
+            <tr><td>앤플란트치과</td><td>에이블치과</td></tr>
+            <tr><td>연세365치과</td><td>연세다정플란트치과</td></tr>
+            <tr><td>뉴헤어모발성형외과의원</td><td>연세꿈꾸는아이치과의원</td></tr>
+            <tr><td>옥스치과</td><td>올곧바른치과</td></tr>
+            <tr><td>닥터훈치과</td><td>원플란트치과</td></tr>
+            <tr><td>이엔수석치과</td><td>일산스마트치과</td></tr>
+            <tr><td>인생플란트치과</td><td>용인스마트치과</td></tr>
+            <tr><td>윤구강악안면외과치과의원</td><td>조은서울치과</td></tr>
+            <tr><td>미래로치과(강동)</td><td>티파니치과</td></tr>
+            <tr><td>화이트라인치과</td><td>한빛치과의원</td></tr>
+            <tr><td>화이트플란치과</td><td>타이거치과</td></tr>
+            <tr><td>파주스마트치과의원</td><td>퍼펙트치과</td></tr>
+            <tr><td>평택뉴욕치과</td><td>강서모아치과</td></tr>
+            <tr><td>프라임치과</td><td>플랜트치과</td></tr>
+            <tr><td>하남스마트치과의원</td><td>하이탑치과</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- ===== 콜 스크립트 요약 ===== -->
+    <section class="pc-script" id="script">
+      <div class="pc-container">
+        <header class="pc-text-center pc-mb-48">
+          <span class="pc-section-label">Call Script</span>
+          <h2 class="pc-section-title">인지심리학 기반 콜 스크립트 요약</h2>
+        </header>
+
+        <!-- 1. 설득 구조 -->
+        <div class="pc-script-grid pc-mb-48">
+          <div>
+            <h3 class="pc-script-section-title">1. 설득 구조</h3>
+            <p class="pc-section-desc pc-mb-24">
+              <strong>인지심리학을 기반</strong>으로 환자가<br />
+              <strong>"행동 전환"</strong>을 하도록 설계된<br />
+              대화 구조입니다.
+            </p>
+          </div>
+          <div class="pc-script-flow" role="presentation">
+            <div class="pc-flow-item">
+              <div class="pc-flow-step">문제 인식</div>
+              <div class="pc-flow-arrow">↓</div>
+              <div class="pc-flow-step">대안 제시</div>
+              <div class="pc-flow-arrow">↓</div>
+              <div class="pc-flow-step">가치(희소성) 부여</div>
+              <div class="pc-flow-arrow">↓</div>
+              <div class="pc-flow-step">예약 유도</div>
+              <div class="pc-flow-arrow">↓</div>
+              <div class="pc-flow-step">친절 응대</div>
+              <div class="pc-flow-arrow">↓</div>
+              <div class="pc-flow-step">문자 재인지</div>
+              <div class="pc-flow-arrow">↓</div>
+              <div class="pc-flow-result">성과 달성</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. 콜 스크립트 핵심 흐름 -->
+        <div class="pc-mb-48">
+          <h3 class="pc-script-section-title pc-mb-24">2. 콜 스크립트 핵심 흐름</h3>
+          <div class="pc-script-table-wrap">
+            <table class="pc-script-table">
+              <thead>
+                <tr>
+                  <th>단계</th>
+                  <th>주요 내용</th>
+                  <th>톤앤매너</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>인사 · 공감</strong></td>
+                  <td>"치료 부위 불편함은 없으신가요?" → 신뢰 형성</td>
+                  <td>매우 친절</td>
+                </tr>
+                <tr>
+                  <td><strong>문제 제기</strong></td>
+                  <td>"초기 2년은 탈락 가능성이 가장 높은 시기입니다."</td>
+                  <td>객관적 · 사실 중심</td>
+                </tr>
+                <tr>
+                  <td><strong>가치 부여</strong></td>
+                  <td>"보증 유지 및 탈락 방지를 위해 1년 1회 검진은 필수입니다."</td>
+                  <td>단호 · 전문</td>
+                </tr>
+                <tr>
+                  <td><strong>예약 유도 및 이벤트 안내</strong></td>
+                  <td>
+                    "이번 주 월·화·수 중 언제 방문 가능하실까요?"<br />
+                    이번에 방문 시 40만원 가량의 리프팅 시술을 진행해 드립니다
+                  </td>
+                  <td>선택 제한형</td>
+                </tr>
+                <tr>
+                  <td><strong>마무리</strong></td>
+                  <td>"내원 시 꼼꼼히 확인해드리겠습니다."</td>
+                  <td>부드럽게 전환</td>
+                </tr>
+                <tr>
+                  <td><strong>예약 확정 문자</strong></td>
+                  <td>
+                    "○○님 ○월 ○일(○) ○시 정기검진 예약이 확정되었습니다.<br />
+                    미내원 시 보증이 해제될 수 있으니 참고 부탁드립니다."
+                  </td>
+                  <td>부드럽게 전환</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- 3. 환자 선정 -->
+        <div>
+          <h3 class="pc-script-section-title pc-mb-24">3. 환자 선정</h3>
+          <div class="pc-patient-cards">
+            <div class="pc-patient-card">
+              <div class="pc-patient-card-bg" style="background-image:url('https://cdn.imweb.me/thumbnail/20251206/d61aba1bf6fe0.jpg');"></div>
+              <div class="pc-patient-card-overlay"></div>
+              <div class="pc-patient-card-content">
+                <strong>1 순위</strong>
+                <p>임플란트 완료 후 1년 경과 환자</p>
+              </div>
+            </div>
+            <div class="pc-patient-card">
+              <div class="pc-patient-card-bg" style="background-image:url('https://cdn.imweb.me/thumbnail/20251206/bb26056e92306.jpg');"></div>
+              <div class="pc-patient-card-overlay"></div>
+              <div class="pc-patient-card-content">
+                <strong>목표</strong>
+                <p>보증기간 내 유지관리 · 정기검진 안내를 통한 재내원 유도</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 비용 분석 ===== -->
+    <section class="pc-cost" id="cost">
+      <div class="pc-container">
+        <header class="pc-text-center">
+          <span class="pc-section-label">Cost Analysis</span>
+          <h2 class="pc-section-title">서비스 비용 및 수익율 분석</h2>
+        </header>
+        <img
+          src="https://cdn.imweb.me/thumbnail/20251224/d1bfefbe68f88.png"
+          alt="서비스 비용 및 수익율 분석 차트"
+          class="pc-cost-img"
+          loading="lazy"
+        />
+      </div>
+    </section>
+
+    <!-- ===== 구글시트 관리 시스템 ===== -->
+    <section class="pc-sheets" id="sheets">
+      <div class="pc-container">
+        <div class="pc-sheets-grid">
+          <div>
+            <span class="pc-section-label">Real-time Management</span>
+            <h2 class="pc-section-title">실시간 운영 관리 시스템</h2>
+            <p class="pc-section-desc pc-mb-8">구글시트 기반 실적 공유</p>
+            <p class="pc-section-desc">
+              한번마케팅의 모든 정기관리 콜은 <strong>구글시트(Google Sheets)</strong>를 통해
+              콜 진행 현황, 예약 건수, 내원 결과를 <strong>실시간으로 병원과 공유</strong>합니다.
+            </p>
+            <ul class="pc-sheets-features">
+              <li>
+                <span class="feature-icon">·</span>
+                <span>예약일, 콜일, 환자명, 시술종류별 상태 실시간 확인</span>
+              </li>
+              <li>
+                <span class="feature-icon">·</span>
+                <span>내원/미내원/예약미도래 등 단계별 데이터 자동 집계</span>
+              </li>
+              <li>
+                <span class="feature-icon">·</span>
+                <span>월별 내원율 및 성과 리포트 자동 계산</span>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <img
+              src="https://cdn.imweb.me/thumbnail/20251206/d61dd39c7097a.png"
+              alt="구글시트 실시간 관리 시스템 화면"
+              class="pc-sheets-img"
+              loading="lazy"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CTA ===== -->
+    <section class="pc-cta" id="cta">
+      <div class="pc-container">
+        <p class="pc-review-tag">WHY HANBEON?</p>
+        <h2 class="pc-section-title white">왜, 한번 마케팅인가요?</h2>
+        <p class="pc-cta-sub">
+          정기검진 콜 진단을 통해 우리 병원에 맞는 전략을 확인하세요.<br />
+          구조가 달라지면 결과가 달라집니다.
+        </p>
+        <div>
+          <a href="qna.html" class="pc-cta-btn">정기검진 콜 진단 받기</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 원장 후기 슬라이더 ===== -->
+    <section class="pc-reviews" id="reviews">
+      <div class="pc-container">
+        <header class="pc-reviews-head pc-mb-48">
+          <p class="pc-review-tag">치과 원장님들의 생생한 후기</p>
+          <h2 class="pc-section-title">치과 원장님들의 생생한 후기</h2>
+        </header>
+
+        <div class="pc-swiper-wrap">
+          <div class="swiper pc-review-swiper">
+            <div class="swiper-wrapper">
+
+              <!-- 후기 1 -->
+              <div class="swiper-slide">
+                <article class="pc-review-card">
+                  <img
+                    src="https://cdn.imweb.me/thumbnail/20251219/71a2ec54e818b.jpg"
+                    alt="마케팅이 아니라 시스템이었습니다 후기"
+                    class="pc-review-card-img"
+                    loading="lazy"
+                  />
+                  <div class="pc-review-card-body">
+                    <h3 class="pc-review-card-title">마케팅이 아니라, 시스템이었습니다.</h3>
+                    <p class="pc-review-card-desc">
+                      그동안 광고만 반복했지 구조는 없었는데, 환자 예약 흐름이 완전히 달라졌습니다.
+                      정기검진 관리가 안정되면서 매출과 CS 모두 눈에 띄게 개선됐습니다.
+                    </p>
+                  </div>
+                </article>
+              </div>
+
+              <!-- 후기 2 -->
+              <div class="swiper-slide">
+                <article class="pc-review-card">
+                  <img
+                    src="https://cdn.imweb.me/thumbnail/20251219/42f3b3bf615d9.jpg"
+                    alt="원장이 신경 쓰지 않아도 돌아가는 구조 후기"
+                    class="pc-review-card-img"
+                    loading="lazy"
+                  />
+                  <div class="pc-review-card-body">
+                    <h3 class="pc-review-card-title">원장이 신경 쓰지 않아도 돌아가는 구조</h3>
+                    <p class="pc-review-card-desc">
+                      직접 개입하지 않아도 예약·내원이 자연스럽게 이어집니다.
+                      단순 대행이 아니라 병원 상황을 이해한 맞춤 전략이라는 점이 가장 만족스럽습니다.
+                    </p>
+                  </div>
+                </article>
+              </div>
+
+              <!-- 후기 3 -->
+              <div class="swiper-slide">
+                <article class="pc-review-card">
+                  <img
+                    src="https://cdn.imweb.me/thumbnail/20251219/f1e489e6005bd.jpg"
+                    alt="결과로 증명된 치과 마케팅 후기"
+                    class="pc-review-card-img"
+                    loading="lazy"
+                  />
+                  <div class="pc-review-card-body">
+                    <h3 class="pc-review-card-title">결과로 증명된 치과 마케팅</h3>
+                    <p class="pc-review-card-desc">
+                      말로만 효과를 이야기하는 곳과는 달랐습니다.
+                      데이터와 리포트로 설명해주니 신뢰가 갔고, 실제 내원율로 결과가 나왔습니다.
+                    </p>
+                  </div>
+                </article>
+              </div>
+
+              <!-- 후기 4 -->
+              <div class="swiper-slide">
+                <article class="pc-review-card">
+                  <img
+                    src="https://cdn.imweb.me/thumbnail/20251219/2764ed3426fbf.jpg"
+                    alt="환자 응대에 대한 부담이 줄었습니다 후기"
+                    class="pc-review-card-img"
+                    loading="lazy"
+                  />
+                  <div class="pc-review-card-body">
+                    <h3 class="pc-review-card-title">환자 응대에 대한 부담이 줄었습니다.</h3>
+                    <p class="pc-review-card-desc">
+                      콜과 예약 관리가 체계화되면서 직원들의 업무 부담이 눈에 띄게 줄었고,
+                      환자 응대 품질도 함께 올라간 것이 가장 큰 변화였습니다.
+                    </p>
+                  </div>
+                </article>
+              </div>
+
+              <!-- 후기 5 -->
+              <div class="swiper-slide">
+                <article class="pc-review-card">
+                  <img
+                    src="https://cdn.imweb.me/thumbnail/20251219/93ad2001bf8bd.jpg"
+                    alt="광고비를 쓰는 방식이 달라졌습니다 후기"
+                    class="pc-review-card-img"
+                    loading="lazy"
+                  />
+                  <div class="pc-review-card-body">
+                    <h3 class="pc-review-card-title">광고비를 쓰는 방식이 달라졌습니다.</h3>
+                    <p class="pc-review-card-desc">
+                      무작정 광고를 늘리기보다, 기존 환자를 관리하는 구조가 중요하다는 걸 알게 됐습니다.
+                      비용 대비 효과 면에서 훨씬 합리적인 선택이었다고 생각합니다.
+                    </p>
+                  </div>
+                </article>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- 내비게이션 버튼 -->
+          <button class="pc-swiper-prev" aria-label="이전 후기">
+            <i class="fas fa-chevron-left"></i>
+          </button>
+          <button class="pc-swiper-next" aria-label="다음 후기">
+            <i class="fas fa-chevron-right"></i>
+          </button>
+        </div>
+
+        <!-- 페이지네이션 -->
+        <div class="swiper-pagination-pc" id="reviewPagination"></div>
+      </div>
+    </section>
+
+    <!-- ===== 유튜브 채널 ===== -->
+    <section class="pc-youtube" id="youtube">
+      <div class="pc-container">
+        <header class="pc-youtube-head">
+          <span class="pc-section-label" style="color:rgba(255,255,255,0.7);background:rgba(255,255,255,0.1);">YouTube</span>
+          <h2 class="pc-section-title white">유튜브 의학정보 채널 운영</h2>
+          <p class="pc-section-desc">
+            여러 의료 전문가와 함께 환자 중심의 진료 철학과 의료 정보를 전달하는<br />
+            유튜브 채널 '<strong style="color:#fff;">인생유통기한 연장</strong>'을 운영하고 있습니다.
+          </p>
+        </header>
+
+        <div class="pc-yt-grid">
+          <a href="https://www.youtube.com/watch?v=tiDljDSML2M" target="_blank" rel="noopener" class="pc-yt-thumb" aria-label="유튜브 영상 1">
+            <img src="https://cdn.imweb.me/thumbnail/20251206/4ba1dbeaf0ffc.jpg" alt="인생유통기한 연장 영상 1" loading="lazy" />
+            <div class="pc-yt-play"><i class="fas fa-play"></i></div>
+          </a>
+          <a href="https://www.youtube.com/watch?v=o8W9gWnGdm4" target="_blank" rel="noopener" class="pc-yt-thumb" aria-label="유튜브 영상 2">
+            <img src="https://cdn.imweb.me/thumbnail/20251206/9745158d57493.jpg" alt="인생유통기한 연장 영상 2" loading="lazy" />
+            <div class="pc-yt-play"><i class="fas fa-play"></i></div>
+          </a>
+          <a href="https://www.youtube.com/watch?v=nMhcDnlzUxE" target="_blank" rel="noopener" class="pc-yt-thumb" aria-label="유튜브 영상 3">
+            <img src="https://cdn.imweb.me/thumbnail/20251206/673dee8df77af.jpg" alt="인생유통기한 연장 영상 3" loading="lazy" />
+            <div class="pc-yt-play"><i class="fas fa-play"></i></div>
+          </a>
+          <a href="https://www.youtube.com/watch?v=VVTqEdcGqy8" target="_blank" rel="noopener" class="pc-yt-thumb" aria-label="유튜브 영상 4">
+            <img src="https://cdn.imweb.me/thumbnail/20251206/45aacb31f41e9.jpg" alt="인생유통기한 연장 영상 4" loading="lazy" />
+            <div class="pc-yt-play"><i class="fas fa-play"></i></div>
+          </a>
+          <a href="https://www.youtube.com/watch?v=MWkthzbaI7M" target="_blank" rel="noopener" class="pc-yt-thumb" aria-label="유튜브 영상 5">
+            <img src="https://cdn.imweb.me/thumbnail/20251206/76e15c83fd358.jpg" alt="인생유통기한 연장 영상 5" loading="lazy" />
+            <div class="pc-yt-play"><i class="fas fa-play"></i></div>
+          </a>
+          <a href="https://www.youtube.com/watch?v=ier5jQT74dQ" target="_blank" rel="noopener" class="pc-yt-thumb" aria-label="유튜브 영상 6">
+            <img src="https://cdn.imweb.me/thumbnail/20251206/c69093dfb3215.jpg" alt="인생유통기한 연장 영상 6" loading="lazy" />
+            <div class="pc-yt-play"><i class="fas fa-play"></i></div>
+          </a>
+          <a href="https://www.youtube.com/watch?v=TkFaBctByY8" target="_blank" rel="noopener" class="pc-yt-thumb" aria-label="유튜브 영상 7">
+            <img src="https://cdn.imweb.me/thumbnail/20251206/620a170095443.jpg" alt="인생유통기한 연장 영상 7" loading="lazy" />
+            <div class="pc-yt-play"><i class="fas fa-play"></i></div>
+          </a>
+          <a href="https://www.youtube.com/watch?v=UDatzmlYkdk" target="_blank" rel="noopener" class="pc-yt-thumb" aria-label="유튜브 영상 8">
+            <img src="https://cdn.imweb.me/thumbnail/20251206/eeacc6b120fd4.jpg" alt="인생유통기한 연장 영상 8" loading="lazy" />
+            <div class="pc-yt-play"><i class="fas fa-play"></i></div>
+          </a>
+          <a href="https://www.youtube.com/watch?v=2roip2K5bDY" target="_blank" rel="noopener" class="pc-yt-thumb" aria-label="유튜브 영상 9">
+            <img src="https://cdn.imweb.me/thumbnail/20251206/a81a21a9973a4.jpg" alt="인생유통기한 연장 영상 9" loading="lazy" />
+            <div class="pc-yt-play"><i class="fas fa-play"></i></div>
+          </a>
+          <a href="https://www.youtube.com/watch?v=TQcbqFxZ9dI" target="_blank" rel="noopener" class="pc-yt-thumb" aria-label="유튜브 영상 10">
+            <img src="https://cdn.imweb.me/thumbnail/20251206/3b5c00ad8b5c1.jpg" alt="인생유통기한 연장 영상 10" loading="lazy" />
+            <div class="pc-yt-play"><i class="fas fa-play"></i></div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Contact ===== -->
+    <section class="pc-contact" id="contact">
+      <div class="pc-container">
+        <h2 class="pc-contact-title">Contact <span>us.</span></h2>
+        <div class="pc-contact-cards">
+          <a href="https://m.blog.naver.com/hanbeon0801?tab=1" target="_blank" rel="noopener" class="pc-contact-card">
+            <div class="pc-contact-card-head">
+              <span class="pc-contact-card-name">한번 블로그 바로가기</span>
+              <i class="fas fa-arrow-right pc-contact-card-arrow"></i>
+            </div>
+            <span class="pc-contact-card-url">m.blog.naver.com/hanbeon0801</span>
+            <span class="pc-contact-card-action">한번 블로그 방문하기</span>
+          </a>
+          <a href="https://www.youtube.com/@HB-and-BS" target="_blank" rel="noopener" class="pc-contact-card">
+            <div class="pc-contact-card-head">
+              <span class="pc-contact-card-name">한번 유튜브 바로가기</span>
+              <i class="fas fa-arrow-right pc-contact-card-arrow"></i>
+            </div>
+            <span class="pc-contact-card-url">youtube.com/@HB-and-BS</span>
+            <span class="pc-contact-card-action">유튜브 채널 방문하기</span>
+          </a>
+          <div class="pc-contact-card" style="cursor:default;">
+            <div class="pc-contact-card-head">
+              <span class="pc-contact-card-name">오픈채팅방 참여하기</span>
+              <i class="fas fa-arrow-right pc-contact-card-arrow"></i>
+            </div>
+            <span class="pc-contact-card-url">@hanbeon</span>
+            <span class="pc-contact-card-action">오픈채팅방 참여하기</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="pc-footer">
+    <div class="pc-container">
+      <div class="pc-footer-inner">
+        <div class="pc-footer-logo-area">
+          <a href="index.html" class="logo">한번</a>
+          <div class="pc-footer-info">
+            <span>한번 | 사업자등록번호: 675-05-02786</span>
+            <span>주소: 서울특별시 구로구 디지털로 34길 55, B201-D 1호</span>
+            <span>상담: 000-000-0000</span>
+          </div>
+          <p class="pc-footer-copy">@2026 HANBEON. All rights reserved.</p>
+        </div>
+        <nav class="pc-footer-nav" aria-label="footer navigation">
+          <p class="pc-footer-nav-title">서비스 바로가기</p>
+          <a href="naver-place.html">네이버 플레이스 상위 노출</a>
+          <a href="patient-care.html">정기검진 환자 관리</a>
+          <a href="ai-solution.html">AI 노출 최적화</a>
+        </nav>
+        <nav class="pc-footer-nav" aria-label="footer page navigation">
+          <p class="pc-footer-nav-title">페이지 바로가기</p>
+          <a href="index.html">홈</a>
+          <a href="index.html#stats">성과</a>
+          <a href="index.html#process">진행방식</a>
+          <a href="qna.html">무료 진단</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== SCRIPTS ===== -->
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <script>
+    // ── 후기 슬라이더 ──
+    const reviewSwiper = new Swiper('.pc-review-swiper', {
+      slidesPerView: 1.1,
+      spaceBetween: 16,
+      loop: true,
+      autoplay: {
+        delay: 4000,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: '#reviewPagination',
+        clickable: true,
+      },
+      navigation: {
+        prevEl: '.pc-swiper-prev',
+        nextEl: '.pc-swiper-next',
+      },
+      breakpoints: {
+        480: { slidesPerView: 1.5, spaceBetween: 16 },
+        768: { slidesPerView: 2.2, spaceBetween: 20 },
+        1024: { slidesPerView: 3, spaceBetween: 24 },
+      },
+    });
+
+    // ── 헤더 스크롤 ──
+    const siteHeader = document.getElementById('site-header');
+    window.addEventListener('scroll', () => {
+      siteHeader.classList.toggle('scrolled', window.scrollY > 20);
+    }, { passive: true });
+
+    // ── 모바일 메뉴 ──
+    const hamburgerBtn = document.getElementById('hamburgerBtn');
+    const mobileMenu   = document.getElementById('mobileMenu');
+    hamburgerBtn?.addEventListener('click', () => {
+      mobileMenu.classList.toggle('open');
+      hamburgerBtn.classList.toggle('active');
+    });
+    document.querySelectorAll('.mobile-link').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.remove('open');
+        hamburgerBtn.classList.remove('active');
+      });
+    });
+  </script>
+</body>
+</html>
